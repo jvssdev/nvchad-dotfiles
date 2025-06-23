@@ -164,4 +164,23 @@ ${content}}
       indent = { enable = true, disable = { "ruby" } },
     },
   },
+
+  {
+
+    {
+      "folke/which-key.nvim",
+      opts = {
+        spec = {
+          { "<leader>o", group = "obsidian", icon = " ", mode = { "n", "v" } },
+        },
+      },
+    },
+    -- {
+    --   "nvim-lualine/lualine.nvim",
+    --   optional = true,
+    --   opts = function(_, opts)
+    --     table.insert(opts.sections.lualine_x, 1, "g:obsidian")
+    --   end,
+    -- },
+  },
 }
