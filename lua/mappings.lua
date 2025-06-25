@@ -80,3 +80,7 @@ map("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 map("n", "<C-t>", function()
   require("menu").open "default"
 end, {})
+
+map("n", "<RightMouse>", function()
+  require("menu").open("default", { mouse = true })
+end, {})
