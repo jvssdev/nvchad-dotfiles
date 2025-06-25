@@ -9,7 +9,7 @@ map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- File Explorer (nvim-tree)
 map("n", "<leader>e", function()
-  local api = require("nvim-tree.api")
+  local api = require "nvim-tree.api"
   local is_visible = api.tree.is_visible()
 
   if is_visible then
@@ -21,7 +21,7 @@ map("n", "<leader>e", function()
 end, { desc = "Toggle NvimTree" })
 
 -- Telescope builtins
-local builtin = require("telescope.builtin")
+local builtin = require "telescope.builtin"
 
 map("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 map("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
@@ -35,21 +35,21 @@ map("n", "<leader>s.", builtin.oldfiles, { desc = "[S]earch Recent Files" })
 map("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 map("n", "<leader>/", function()
-  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
     winblend = 10,
     previewer = false,
-  }))
+  })
 end, { desc = "[/] Search in current buffer" })
 
 map("n", "<leader>s/", function()
-  builtin.live_grep({
+  builtin.live_grep {
     grep_open_files = true,
     prompt_title = "Live Grep in Open Files",
-  })
+  }
 end, { desc = "[S]earch [/] in open files" })
 
 map("n", "<leader>sn", function()
-  builtin.find_files({ cwd = vim.fn.stdpath("config") })
+  builtin.find_files { cwd = vim.fn.stdpath "config" }
 end, { desc = "[S]earch [N]eovim config files" })
 
 -- Custom WhichKey search prompt
@@ -69,11 +69,14 @@ map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
 map("n", "<leader>bd", function()
   if vim.bo.buftype == "terminal" then
-    vim.cmd("bdelete!")
+    vim.cmd "bdelete!"
   else
-    vim.cmd("bdelete")
+    vim.cmd "bdelete"
   end
 end, { desc = "Delete Buffer" })
 
 map("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
+map("n", "<C-t>", function()
+  require("menu").open "default"
+end, {})
