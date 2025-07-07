@@ -10,6 +10,7 @@ local options = {
     jsx = { "biome" },
     tsx = { "biome" },
     markdown = { "biome" },
+    go = { "goimports", "gofmt" },
   },
   formatters = {
     stylua = {
