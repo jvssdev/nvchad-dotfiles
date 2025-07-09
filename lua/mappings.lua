@@ -84,3 +84,6 @@ end, {})
 map("n", "<RightMouse>", function()
   require("menu").open("default", { mouse = true })
 end, {})
+
+map("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice Message" })
+map("n", "<leader>nt", "<cmd>Telescope noice<CR>", { desc = "Noice Telescope" })

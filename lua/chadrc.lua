@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
+  theme = "gruvbox",
 
   -- hl_override = {
   -- 	Comment = { italic = true },
@@ -35,9 +35,17 @@ M.ui = {
     theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "default",
-    order = nil,
-    modules = nil,
+    separator_style = "arrow",
+    order = { "mode", "git", "file", "%=", "lsp", "cursor" },
+    modules = {
+      file = function()
+        local path = vim.fn.expand "%:p"
+        if path == "" then
+          return " [No File] "
+        end
+        return "%#StText# " .. path .. " "
+      end,
+    },
   },
 
   -- lazyload it when there are 1+ buffers
