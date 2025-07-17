@@ -1,22 +1,47 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- uncomment for format on save
+    event = "BufWritePre", -- format on save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      pickers = {
+        find_files = {
+          find_command = { "fd", "--type", "f", "--hidden", "--exclude", ".git", "--strip-cwd-prefix" },
+        },
+      },
+      defaults = {
+        vimgrep_arguments = {
+          "rg",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+        },
+        hidden = true,
+      },
+    },
+  },
   {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
-    ---@type snacks.Config
     opts = {
       bigfile = { enabled = false },
       dashboard = { enabled = true },
@@ -30,11 +55,7 @@ return {
       scroll = { enabled = false },
       statuscolumn = { enabled = false },
       words = { enabled = false },
-      lazygit = {
-        -- your lazygit configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      },
+      lazygit = {},
       image = {
         formats = {
           "png",
@@ -53,7 +74,7 @@ return {
           "webm",
           "pdf",
         },
-        force = false, -- try displaying the image, even if the terminal does not support it
+        force = false,
         doc = {
           enabled = true,
           inline = true,
@@ -133,9 +154,6 @@ ${content}}
       },
     },
   },
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -156,31 +174,17 @@ ${content}}
       auto_install = true,
       highlight = {
         enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { "ruby" },
       },
       indent = { enable = true, disable = { "ruby" } },
     },
   },
-
   {
-
-    {
-      "folke/which-key.nvim",
-      opts = {
-        spec = {
-          { "<leader>o", group = "obsidian", icon = " ", mode = { "n", "v" } },
-        },
+    "folke/which-key.nvim",
+    opts = {
+      spec = {
+        { "<leader>o", group = "obsidian", icon = " ", mode = { "n", "v" } },
       },
     },
-    -- {
-    --   "nvim-lualine/lualine.nvim",
-    --   optional = true,
-    --   opts = function(_, opts)
-    --     table.insert(opts.sections.lualine_x, 1, "g:obsidian")
-    --   end,
-    -- },
   },
 }
