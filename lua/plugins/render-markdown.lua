@@ -1,5 +1,6 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
+  disabled = true,
   opts = {
     link = {
       enabled = true,
