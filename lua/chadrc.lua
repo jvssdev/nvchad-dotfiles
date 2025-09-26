@@ -104,8 +104,8 @@ M.base46 = {
     TermCursorNC = { bg = "#000000" }, -- Non-current terminal cursor
 
     -- UI elements (Statusline, Winbar, etc.)
-    StatusLine = { bg = "#000000" }, -- Statusline background
-    StatusLineNC = { bg = "#000000" }, -- Non-current statusline
+    -- StatusLine = { bg = "#000000" }, -- Statusline background
+    -- StatusLineNC = { bg = "#000000" }, -- Non-current statusline
     WinBar = { bg = "#000000" }, -- Winbar background
     WinBarNC = { bg = "#000000" }, -- Non-current winbar
     Pmenu = { bg = "#000000" }, -- Popup menu background (completion)
@@ -126,7 +126,7 @@ M.nvchad = {
       event = { "VimEnter", "ColorScheme", "BufWinEnter" },
       callback = function()
         vim.schedule(function()
-          vim.api.nvim_command('hi clear')
+          vim.api.nvim_command "hi clear"
           require("base46").load_all_highlights()
         end)
       end,
@@ -136,7 +136,7 @@ M.nvchad = {
       pattern = "NvimTree*",
       callback = function()
         vim.schedule(function()
-          vim.api.nvim_command('hi clear')
+          vim.api.nvim_command "hi clear"
           require("base46").load_all_highlights()
         end)
       end,

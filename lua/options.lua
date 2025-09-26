@@ -3,5 +3,7 @@ require "nvchad.options"
 -- add yours here!
 
 local o = vim.o
-vim.o.swapfile = false
--- o.cursorlineopt ='both' -- to enable cursorline!
+o.swapfile = false
+o.relativenumber = true
+
+-- o.cursorlineopt = "both" -- to enable cursorline!
