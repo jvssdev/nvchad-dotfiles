@@ -1,5 +1,9 @@
 return {
   {
+    "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
     opts = require "configs.conform",

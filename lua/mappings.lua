@@ -8,17 +8,17 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- File Explorer (nvim-tree)
-map("n", "<leader>e", function()
-  local api = require "nvim-tree.api"
-  local is_visible = api.tree.is_visible()
-
-  if is_visible then
-    api.tree.close()
-  else
-    api.tree.open()
-    api.tree.focus()
-  end
-end, { desc = "Toggle NvimTree" })
+-- map("n", "<leader>e", function()
+--   local api = require "nvim-tree.api"
+--   local is_visible = api.tree.is_visible()
+--
+--   if is_visible then
+--     api.tree.close()
+--   else
+--     api.tree.open()
+--     api.tree.focus()
+--   end
+-- end, { desc = "Toggle NvimTree" })
 
 -- Telescope builtins
 local builtin = require "telescope.builtin"

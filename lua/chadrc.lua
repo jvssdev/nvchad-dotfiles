@@ -25,44 +25,44 @@ M.base46 = {
     MsgArea = { bg = "#000000" }, -- Message area background
     MsgSeparator = { bg = "#000000" }, -- Message separator background
 
-    -- Nvim-Tree highlights (comprehensive list to cover all possible elements)
-    NvimTreeNormal = { bg = "#000000" }, -- Main Nvim-Tree window background
-    NvimTreeNormalFloat = { bg = "#000000" }, -- Floating windows in Nvim-Tree
-    NvimTreeFolderName = { bg = "#000000" }, -- Folder names
-    NvimTreeEmptyFolderName = { bg = "#000000" }, -- Empty folder names
-    NvimTreeOpenedFolderName = { bg = "#000000" }, -- Opened folder names
-    NvimTreeRootFolder = { bg = "#000000" }, -- Root folder
-    NvimTreeGitDirty = { bg = "#000000" }, -- Git dirty indicators
-    NvimTreeGitStaged = { bg = "#000000" }, -- Git staged indicators
-    NvimTreeGitNew = { bg = "#000000" }, -- Git new files
-    NvimTreeGitDeleted = { bg = "#000000" }, -- Git deleted files
-    NvimTreeGitIgnored = { bg = "#000000" }, -- Git ignored files
-    NvimTreeGitRenamed = { bg = "#000000" }, -- Git renamed files
-    NvimTreeGitMerge = { bg = "#000000" }, -- Git merge conflict indicators
-    NvimTreeIndentMarker = { bg = "#000000" }, -- Indent markers
-    NvimTreeWindowPicker = { bg = "#000000" }, -- Window picker
-    NvimTreeSpecialFile = { bg = "#000000" }, -- Special files (e.g., README)
-    NvimTreeCursorLine = { bg = "#000000" }, -- Cursor line in Nvim-Tree
-    NvimTreeFolderIcon = { bg = "#000000" }, -- Folder icons
-    NvimTreeFileIcon = { bg = "#000000" }, -- File icons
-    NvimTreeSymlink = { bg = "#000000" }, -- Symlink files
-    NvimTreeBookmark = { bg = "#000000" }, -- Bookmarked files
-    NvimTreeExecFile = { bg = "#000000" }, -- Executable files
-    NvimTreeImageFile = { bg = "#000000" }, -- Image files
-    NvimTreeModifiedFile = { bg = "#000000" }, -- Modified files
-    NvimTreeOpenedFile = { bg = "#000000" }, -- Opened files
-    NvimTreeLiveFilterPrefix = { bg = "#000000" }, -- Live filter prefix
-    NvimTreeStatusLine = { bg = "#000000" }, -- Statusline within Nvim-Tree
-    NvimTreeVertSplit = { bg = "#000000" }, -- Vertical split in Nvim-Tree
-    NvimTreeEndOfBuffer = { bg = "#000000" }, -- End of buffer in Nvim-Tree
-    NvimTreeStatusLineNC = { bg = "#000000" }, -- Non-current statusline in Nvim-Tree
-    NvimTreeGitUntracked = { bg = "#000000" }, -- Git untracked files
-    NvimTreeGitConflict = { bg = "#000000" }, -- Git conflict files
-    NvimTreeBookmarkIcon = { bg = "#000000" }, -- Bookmark icons
-    NvimTreeSignColumn = { bg = "#000000" }, -- Sign column in Nvim-Tree
-    NvimTreeNormalNC = { bg = "#000000" }, -- Non-current Nvim-Tree window
-    NvimTreeLineNr = { bg = "#000000" }, -- Line numbers in Nvim-Tree (if enabled)
-
+    -- -- Nvim-Tree highlights (comprehensive list to cover all possible elements)
+    -- NvimTreeNormal = { bg = "#000000" }, -- Main Nvim-Tree window background
+    -- NvimTreeNormalFloat = { bg = "#000000" }, -- Floating windows in Nvim-Tree
+    -- NvimTreeFolderName = { bg = "#000000" }, -- Folder names
+    -- NvimTreeEmptyFolderName = { bg = "#000000" }, -- Empty folder names
+    -- NvimTreeOpenedFolderName = { bg = "#000000" }, -- Opened folder names
+    -- NvimTreeRootFolder = { bg = "#000000" }, -- Root folder
+    -- NvimTreeGitDirty = { bg = "#000000" }, -- Git dirty indicators
+    -- NvimTreeGitStaged = { bg = "#000000" }, -- Git staged indicators
+    -- NvimTreeGitNew = { bg = "#000000" }, -- Git new files
+    -- NvimTreeGitDeleted = { bg = "#000000" }, -- Git deleted files
+    -- NvimTreeGitIgnored = { bg = "#000000" }, -- Git ignored files
+    -- NvimTreeGitRenamed = { bg = "#000000" }, -- Git renamed files
+    -- NvimTreeGitMerge = { bg = "#000000" }, -- Git merge conflict indicators
+    -- NvimTreeIndentMarker = { bg = "#000000" }, -- Indent markers
+    -- NvimTreeWindowPicker = { bg = "#000000" }, -- Window picker
+    -- NvimTreeSpecialFile = { bg = "#000000" }, -- Special files (e.g., README)
+    -- NvimTreeCursorLine = { bg = "#000000" }, -- Cursor line in Nvim-Tree
+    -- NvimTreeFolderIcon = { bg = "#000000" }, -- Folder icons
+    -- NvimTreeFileIcon = { bg = "#000000" }, -- File icons
+    -- NvimTreeSymlink = { bg = "#000000" }, -- Symlink files
+    -- NvimTreeBookmark = { bg = "#000000" }, -- Bookmarked files
+    -- NvimTreeExecFile = { bg = "#000000" }, -- Executable files
+    -- NvimTreeImageFile = { bg = "#000000" }, -- Image files
+    -- NvimTreeModifiedFile = { bg = "#000000" }, -- Modified files
+    -- NvimTreeOpenedFile = { bg = "#000000" }, -- Opened files
+    -- NvimTreeLiveFilterPrefix = { bg = "#000000" }, -- Live filter prefix
+    -- NvimTreeStatusLine = { bg = "#000000" }, -- Statusline within Nvim-Tree
+    -- NvimTreeVertSplit = { bg = "#000000" }, -- Vertical split in Nvim-Tree
+    -- NvimTreeEndOfBuffer = { bg = "#000000" }, -- End of buffer in Nvim-Tree
+    -- NvimTreeStatusLineNC = { bg = "#000000" }, -- Non-current statusline in Nvim-Tree
+    -- NvimTreeGitUntracked = { bg = "#000000" }, -- Git untracked files
+    -- NvimTreeGitConflict = { bg = "#000000" }, -- Git conflict files
+    -- NvimTreeBookmarkIcon = { bg = "#000000" }, -- Bookmark icons
+    -- NvimTreeSignColumn = { bg = "#000000" }, -- Sign column in Nvim-Tree
+    -- NvimTreeNormalNC = { bg = "#000000" }, -- Non-current Nvim-Tree window
+    -- NvimTreeLineNr = { bg = "#000000" }, -- Line numbers in Nvim-Tree (if enabled)
+    --
     -- Telescope highlights
     TelescopeNormal = { bg = "#000000" }, -- Main Telescope window background
     TelescopeBorder = { bg = "#000000", fg = "#000000" }, -- Telescope border
