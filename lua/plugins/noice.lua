@@ -16,6 +16,7 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
+      "nvim-lualine/lualine.nvim",
     },
   },
 }
