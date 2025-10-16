@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "oxocarbon",
+  theme = "nord",
   -- hl_override = {
   -- 	Comment = { italic = true },
   -- 	["@comment"] = { italic = true },
@@ -68,7 +68,7 @@ M.ui = {
   tabufline = {
     enabled = true,
     lazyload = true,
-    order = { "treeOffset", "buffers", "tabs", "btns" },
+    order = { "treeOffset", "buffers", "tabs" },
     modules = nil,
     bufwidth = 21,
   },
