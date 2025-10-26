@@ -2,17 +2,17 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "biome" },
-    html = { "prettier" },
+    html = { "prettierd" },
     javascript = { "biome" },
     typescriptreact = { "biome" },
     javascriptreact = { "biome" },
-    json = { "prettier" },
-    jsonc = { "prettier" },
+    json = { "prettierd" },
+    jsonc = { "prettierd" },
     jsx = { "biome" },
     tsx = { "biome" },
-    markdown = { "prettier" },
+    markdown = { "prettierd" },
     go = { "goimports", "gofmt" },
-    yaml = { "prettier" },
+    yaml = { "prettierd" },
     qml = { "qmlformat" },
   },
   formatters = {
@@ -27,8 +27,9 @@ local options = {
       },
     },
     prettierd = {
-      env = {
-        PRETTIERD_DEFAULT_CONFIG = vim.fn.expand "~/.prettierrc",
+      prepend_args = {
+        "--tab-width=2",
+        "--use-tabs=false",
       },
     },
     isort = {
