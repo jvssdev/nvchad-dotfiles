@@ -14,6 +14,7 @@ local options = {
     go = { "goimports", "gofmt" },
     yaml = { "prettierd" },
     qml = { "qmlformat" },
+    nix = { "nixfmt" },
   },
   formatters = {
     stylua = {
